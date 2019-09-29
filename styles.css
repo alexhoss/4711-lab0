@@ -18,10 +18,16 @@ body {
 
 .artistImg {
     padding-right: 12px;
+    max-width:100px;
 }
 
 .artistSearch {
     border: 1px solid grey;
     padding:15px;
+}
+
+#addArtistForm{
+    
+    display: block;
 }
 

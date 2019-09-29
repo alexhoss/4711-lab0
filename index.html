@@ -1,47 +1,56 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head></head>
 
 <body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="myjs.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Asul|Concert+One|Eczar|Fruktur|Kavoon|Neuton|Space+Mono|Tillana|Work+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <body>
-        <div class="container col-md-5  artistSearch">
+        <div class="container col-md-7  artistSearch" >
             <h4> Artist Directory</h4>
-            <input class="form-control" type="text">
+
+            <div class="row">
+                <div class="col-8"><input class="form-control" type="text"></div>
+                <div class="col-4"><button class="button" id="addArtist" onclick="popUpForm()"> Add Artist</button></div>
+            </div>
+            <br>
+
+
+            <div class="container col-md-8">
+                
+                <form id="addArtistForm">
+                <input id="artistName" class="form-control" type="text" placeholder="Name" maxlength = "40">
+                <input id="artistAbout" class="form-control" type="text" placeholder="About" maxlength = "40">
+                <input id="imgUrl" class="form-control" type="text" placeholder="Image Url">
+
+                <div class="row justify-content-center">
+                    <button type="button" id="add" onclick="addArtist()" > Add</button>
+                </div>
+                    
+                    </form>
+
+
+            </div>
         </div>
 
 
-        <div class="container col-md-4">
-            <ul class="list-group">
+        <div class="container col-md-6">
+            <ul class="list-group" id="artistList">
 
-
-                <li class="list-group-item"><img class="float-left artistImg" src="images/1.jpg"> <span class="artistTitle"> Barrot Bellingham</span>
-                    <p>Royal academy of Painting</p>
-                </li>
-
-                <li class="list-group-item"><img class="float-left artistImg" src="images/18.jpg"> <span class="artistTitle"> Jonathan G Ferrari</span>
-                    <p>Artist to watch in 2012</p>
-                </li>
-
-                <li class="list-group-item"><img class="float-left artistImg" src="images/34.jpg"> <span class="artistTitle"> Hillary Hewitt Goldwnn-Post</span>
-                    <p>New York University</p>
-                </li>
-
-                <li class="list-group-item"><img class="float-left artistImg" src="images/8.jpg"> <span class="artistTitle"> Hassum Harod</span>
-                    <p>Art college in New Delhi</p>
-                </li>
-
-                <li class="list-group-item"><img class="float-left artistImg" src="images/87.jpg"> <span class="artistTitle"> Jennifer Bellingham</span>
-                    <p>Brother of Barrot Bellingham</p>
-                </li>
-
-
+                
+                
             </ul>
 
 
@@ -51,10 +60,15 @@
     </body>
 
 
+
+
     <script type="text/javascript" src="/d2l/common/math/MathML.js?v=20.19.8.17540-141 "></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             D2LMathML.DesktopInit('https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=MML_HTMLorMML', 'https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');
         });
+
     </script>
-</body></html>
+</body>
+
+</html>

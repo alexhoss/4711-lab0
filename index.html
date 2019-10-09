@@ -5,7 +5,6 @@
 
 <body>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="myjs.js"></script>
 
@@ -22,8 +21,9 @@
             <h4> Artist Directory</h4>
 
             <div class="row">
-                <div class="col-8"><input class="form-control" type="text"></div>
-                <div class="col-4"><button class="button" id="addArtist" onclick="popUpForm()"> Add Artist</button></div>
+                <div class="col-6"><input class="form-control" id="searchText" type="text"></div>
+                <div class="col-3"><button class="button" id="addArtist" onclick="popUpForm()"> Add Artist</button></div>
+                <div class="col-3"><button class="button" id="search" onclick="search()"> Search</button></div>
             </div>
             <br>
 
@@ -62,13 +62,15 @@
 
 
 
-    <script type="text/javascript" src="/d2l/common/math/MathML.js?v=20.19.8.17540-141 "></script>
+<!--    <script type="text/javascript" src="/d2l/common/math/MathML.js?v=20.19.8.17540-141 "></script>-->
+<!--
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             D2LMathML.DesktopInit('https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=MML_HTMLorMML', 'https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');
         });
 
     </script>
+-->
 </body>
 
 </html>

@@ -1,10 +1,7 @@
-window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
+let fs = require('fs');
 
-        localStorage.setItem("hasCodeRunBefore", true);
-    }
-    loadStorage();
-}
+var data = fs.readFileSync('artists.json')
+var artists = JSON.parse(data);
 
 function popUpForm() {
     var x = document.getElementById("addArtistForm");
@@ -78,7 +75,7 @@ function loadStorage() {
 
         delButton.append("Delete")
 
-        delButton.addEventListener("click", function () {
+        delButton.addEventListener("click", function() {
             var li = this.parentNode;
             var nameToDel = li.childNodes[1].innerHTML;
             deleteStorage(nameToDel);
@@ -121,8 +118,10 @@ function deleteStorage(nameToDel) {
 
 function addArtist() {
 
+
     //hide form
-    document.getElementById("addArtistForm").style.display = "none";
+    // document.getElementById("addArtistForm").style.display = "none";
+
 
     var nameValue = document.getElementById("artistName").value;
     var aboutValue = document.getElementById("artistAbout").value;
